@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "micro_users")
 @Getter
@@ -27,6 +29,9 @@ public class User {
 
     @Column(name = "ABOUT")
     private String about;
+
+    @Transient
+    private List<Rating> rating;
 
     @Override
     public String toString() {
