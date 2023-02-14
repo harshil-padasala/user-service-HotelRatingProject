@@ -45,7 +45,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      RATING_HOTEL_SERVICE:
+      RATING_HOTEL_SERVICE_CIRCUIT_BREAKER:
 #        How your circuit breaker should behave
 
 #        what is the status of circuit breaker
@@ -65,3 +65,10 @@ resilience4j:
 #        How your retry functionality work
         max-attempts: 4
         wait-duration: 5s
+
+  ratelimiter:
+    instances:
+      RATING_HOTEL_SERVICE_RATE_LIMITER:
+        limit-refresh-period: 10s
+        limit-for-period: 5
+        timeout-duration: 3s
