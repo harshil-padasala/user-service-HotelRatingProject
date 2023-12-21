@@ -43,7 +43,6 @@ The User Service fetches configuration from the GitHub repository:
 - **Request Body:**
   ```bash
   {
-  "userId": "uniqueUserId",
   "name": "User Name",
   "email": "user@example.com",
   "about": "User's description"
