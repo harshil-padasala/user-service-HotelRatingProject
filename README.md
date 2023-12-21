@@ -57,11 +57,40 @@ The User Service fetches configuration from the GitHub repository:
 - **Response:**
   ```bash
   {
-  "userId": "uniqueUserId",
-  "name": "User Name",
-  "email": "user@example.com",
-  "about": "User's description"
-  }
+     "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+     "name": "David Johnson",
+     "email": "david.j@example.org",
+     "about": "Adventure seeker and travel enthusiast, always ready for the next exciting journey.",
+     "rating": [
+       {
+         "ratingId": "6583ec540d80f36afb71e9c5",
+         "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+         "hotelId": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+         "rating": 5,
+         "feedback": "Absolutely fantastic. The view from the room was breathtaking.",
+         "hotel": {
+           "id": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+           "name": "Seaside Resort",
+           "location": "Coastal Beach",
+           "about": "Escape to a tranquil seaside resort offering breathtaking ocean views and top-notch amenities."
+         }
+       },
+       {
+         "ratingId": "6583ed420d80f36afb71e9d4",
+         "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+         "hotelId": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+         "rating": 5,
+         "feedback": "Absolutely fantastic. The view from the room was breathtaking.",
+         "hotel": {
+           "id": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+           "name": "Seaside Resort",
+           "location": "Coastal Beach",
+           "about": "Escape to a tranquil seaside resort offering breathtaking ocean views and top-notch amenities."
+         }
+       }
+     ]
+   }
+
 
 ### Get All Users 🧑‍🤝‍🧑
 
@@ -72,14 +101,43 @@ The User Service fetches configuration from the GitHub repository:
 - **Response:**
   ```bash
   [
-  {
-    "userId": "uniqueUserId1",
-    "name": "User Name 1",
-    "email": "user1@example.com",
-    "about": "User 1's description"
-  },
-  // ... (other users)
-  ]
+     {
+       "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+       "name": "David Johnson",
+       "email": "david.j@example.org",
+       "about": "Adventure seeker and travel enthusiast, always ready for the next exciting journey.",
+       "rating": [
+         {
+           "ratingId": "6583ec540d80f36afb71e9c5",
+           "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+           "hotelId": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+           "rating": 5,
+           "feedback": "Absolutely fantastic. The view from the room was breathtaking.",
+           "hotel": {
+             "id": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+             "name": "Seaside Resort",
+             "location": "Coastal Beach",
+             "about": "Escape to a tranquil seaside resort offering breathtaking ocean views and top-notch amenities."
+           }
+         },
+         {
+           "ratingId": "6583ed420d80f36afb71e9d4",
+           "userId": "4008323b-fff4-4cc8-803f-1387d61a4768",
+           "hotelId": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+           "rating": 5,
+           "feedback": "Absolutely fantastic. The view from the room was breathtaking.",
+           "hotel": {
+             "id": "990fcb4a-6c43-476e-b7b2-4f8ed116a008",
+             "name": "Seaside Resort",
+             "location": "Coastal Beach",
+             "about": "Escape to a tranquil seaside resort offering breathtaking ocean views and top-notch amenities."
+           }
+         }
+       }
+     },
+     // ... (other users)
+   ]
+
 
 ### Delete User 🗑️
 
