@@ -61,6 +61,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User deleteUser(String userId) {
         User user1 = userRepository.findById(userId).orElseThrow(() -> new UserNotFoundException("User not found with specify userId: " + userId));
+        deleteUsersRating(userId);
         userRepository.deleteById(userId);
         return user1;
     }
@@ -82,5 +83,10 @@ public class UserServiceImpl implements UserService {
         user.setRating(ratingsWithHotelDetail);
 
         return user;
+    }
+
+    private void deleteUsersRating(String userId) {
+        // Deleting ratings by UserId
+        ratingService.deleteAllRatingsOfUser(userId);
     }
 }
